@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //이메일을 입력받은 후 이메일에 @기호가 포함되었는지 확인한 후
+      //없으면 다시 이메일을 입력받기
+      //@이 있다면 화면출력
+      function info() {
+        let email = prompt("이메일을 입력해주세요");
+        if (email.match("@")) {
+          document.write(email);
+        } else {
+          alert("이메일주소 확인");
+          info();
+        }
+      }
+      info();
+    </script>
+  </body>
+</html>
