@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Hello World</button>
+    <div>
+      <img src="../object/left-arrow.png" alt="" />
+      <img src="../object/right-arrow.png" alt="" style="display: none" />
+      <input type="button" value="변경" />
+    </div>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $("[type='button']").click(function () {
+        //이미지를 교체
+        $("img").toggle();
+      });
+      //   let b = document.querySelector("button");
+      //   b.setAttribute("name", "hello");
+      //   //button 태그에 disabled 속성 추가
+      //   b.setAttribute("disabled", "");
+    </script>
+  </body>
+</html>

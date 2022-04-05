@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <input type="text" name="num1" id="" />
+        <select name="op" id="">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+          <option value="%">%</option>
+        </select>
+        <input type="text" name="num2" id="" />
+        =
+        <input type="text" name="result" id="" />
+        <input type="button" value="계산" onclick="calc()" />
+      </div>
+    </form>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      function calc() {
+        //num1 값 가져오기
+        let num1 = Number($("[name='num1'").val());
+        let num2 = Number($("[name='num2'").val());
+        //연산 후 결과값 result 보여주기
+        $("[name='result']").val(num1 + num2);
+        let op = $("[name='op']").val();
+        let result;
+        switch (op) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          case "/":
+            result = num1 / num2;
+            break;
+          case "%":
+            result = num1 % num2;
+            break;
+        }
+        $("[name='result'").val(result);
+      }
+
+      // + : 문자열 연결
+      // *,/,-,% => '3'*4 = 12
+      // function calc() {
+      //   //num1 값 가져오기
+      //   let num1 = Number(document.querySelector("[name='num1'").value);
+      //   //num2 값 가져오기
+      //   let num2 = Number(document.querySelector("[name='num2'").value);
+      //   //op값 가져오기
+      //   //switch
+      //   let op = document.querySelector("[name='op']").value;
+      //   let result;
+      //   switch (op) {
+      //     case "+":
+      //       result = num1 + num2;
+      //       break;
+      //     case "-":
+      //       result = num1 - num2;
+      //       break;
+      //     case "*":
+      //       result = num1 * num2;
+      //       break;
+      //     case "/":
+      //       result = num1 / num2;
+      //       break;
+      //     case "%":
+      //       result = num1 % num2;
+      //       break;
+      //   }
+      //   //연산 후 결과값 result 보여주기
+      //   document.querySelector("[name='result']").value = result;
+      // }
+    </script>
+  </body>
+</html>
